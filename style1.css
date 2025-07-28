@@ -1,0 +1,436 @@
+/*
+ *  File: /css/custom.css
+ *  Description: Custom styles for the HiringMine Navbar
+ */
+
+/* -- Variable Definitions -- */
+.navbar-nav text-black m-l{
+    margin-left: 103px !important;
+}
+.site-footer{
+    background-color: #613fe5;
+}
+:root {
+    --hiringmine-purple: #7b61ff; /* Color extracted from your logo */
+    --navbar-text-color: #343a40; /* A standard dark gray for text */
+    --toggle-bg: #e9ecef;         /* Light gray background for the toggle switch */
+    --toggle-circle: #1e293b;     /* Dark circle for the toggle */
+}
+
+/* -- Navbar General Styling -- */
+.navbar {
+    font-family: 'Inter', sans-serif; /* Ensuring we use the modern font */
+}
+
+/* Style for the main navigation links */
+.navbar-nav .nav-link {
+    color: var(--navbar-text-color);
+    font-weight: 500;
+    margin: 0 0.75rem; /* Adds space between the nav items */
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--hiringmine-purple); /* On hover, links turn purple */
+}
+
+/* Special styling for the 'Employee / Post Job' link */
+.special-link {
+    color: var(--hiringmine-purple) !important; /* Use !important to override Bootstrap if needed */
+    font-weight: 700; /* Bolder text */
+}   
+
+/* -- Custom Dark Mode Toggle -- */
+/* This is a cosmetic representation. Making it functional would require JavaScript. */
+.dark-mode-toggle {
+    background-color: var(--toggle-bg);
+    border-radius: 50px; /* Makes the background a pill shape */
+    width: 60px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.dark-mode-toggle i {
+    color: #fff; /* White sun icon */
+    background-color: var(--toggle-circle);
+    border-radius: 50%; /* Makes the icon container a perfect circle */
+    padding: 4px;
+    font-size: 16px;
+    transition: transform 0.3s ease; /* Smooth sliding animation */
+}
+
+/* -- Hero Section Styling -- */
+.small-heading {
+    color: var(--hiringmine-purple);
+    letter-spacing: 1px; /* Gives the text a bit of breathing room */
+}
+
+h1.display-3 {
+    color: #1e293b; /* A very dark blue, almost black */
+}
+
+/* The star of the show: the upload box */
+.upload-box {
+    background-color: #f7f5ff; /* A very light purple background */
+    border: 2px dashed var(--hiringmine-purple);
+    border-radius: 20px; /* Gives it nice rounded corners */
+}
+
+.upload-icon-container {
+    display: inline-block;
+    background-color: #ebe7ff; /* Slightly darker purple for the icon background */
+    border-radius: 16px; /* Rounded square shape */
+    padding: 1rem;
+}
+
+.upload-box i.bi-cloud-upload-fill {
+    font-size: 2.5rem; /* Large icon */
+    color: var(--hiringmine-purple);
+}
+
+/* Customizing the Primary Button */
+.btn-primary {
+    background-color: var(--hiringmine-purple);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 700; /* Bold text */
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #6a50e0; /* A slightly darker purple for hover */
+}
+
+
+/* -- Two-Tier System Section Styling -- */
+
+h2.display-5 {
+    color: #1e293b; /* Consistent dark heading color */
+    line-height: 1.3; /* Improve readability for long headings */
+}
+
+/* The numbered circles for features */
+.feature-number-circle {
+    /* Box Model */
+    min-width: 50px; /* Use min-width to ensure the circle doesn't shrink */
+    height: 50px;
+    border-radius: 50%; /* This is the key to making it a circle */
+
+    /* Color */
+    background-color: var(--hiringmine-purple);
+    color: #fff; /* White text for the number */
+
+    /* Typography */
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    /* Flexbox for centering the number inside the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adjustments for the feature block headings */
+.d-flex h4 {
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+:root {
+    --light-purple-bg: #f7f5ff; /* The background for the whole section */
+}
+
+.features-checklist-section {
+    background-color: var(--light-purple-bg);
+}
+
+/* Reusable card style for this section */
+.feature-card {
+    background-color: #ffffff;
+    border-radius: 1rem; /* 16px */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    height: 100%; /* Important for making columns in the same row equal height */
+}
+
+/* The purple circle icon container */
+.card-icon {
+    display: inline-block;
+    background-color: var(--hiringmine-purple);
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    /* Centering the icon inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon i {
+    font-size: 1.25rem;
+}
+
+/* Custom styling for the checklist items */
+.checklist-item {
+    display: flex;
+    align-items: flex-start; /* Aligns icon with the top of the text */
+    margin-bottom: 0.75rem; /* Space between list items */
+    color: #495057; /* A softer text color */
+}
+
+/* We create the checkmark icon using a ::before pseudo-element */
+.checklist-item::before {
+    content: "\F26A"; /* Bootstrap Icon's hex code for 'check-circle-fill' */
+    font-family: 'bootstrap-icons';
+    color: var(--hiringmine-purple);
+    font-size: 1.1rem;
+    margin-right: 0.75rem; /* Space between checkmark and text */
+    margin-top: 2px; /* Slight vertical adjustment for perfect alignment */
+}
+
+.feature-card .list-unstyled {
+    padding-left: 0; /* Remove default list padding */
+    margin-bottom: 0;
+}
+
+
+/* -- ATS Understanding Section Styling -- */
+
+.ats-understanding-section {
+    background-color: var(--light-purple-bg); /* Reusing the variable from the previous section */
+}
+
+.ats-understanding-section .text-muted {
+    font-size: 1.1rem; /* The text in this section appears slightly larger */
+    line-height: 1.7; /* Generous line spacing for readability */
+}
+
+
+
+
+/* -- Final CTA & FAQ Section Styling -- */
+
+.final-cta-faq-section {
+    background-color: var(--light-purple-bg);
+}
+
+.final-upload-box {
+    background-color: #ffffff;
+    border: 2px dashed var(--hiringmine-purple);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.final-upload-box .btn-primary {
+    padding: 14px 40px;
+    font-size: 1.1rem;
+}
+
+/* -- Customizing the Bootstrap Accordion -- */
+:root {
+    /* Overriding Bootstrap's default accordion styles */
+    --bs-accordion-border-color: #e9ecef;
+    --bs-accordion-border-radius: 0.75rem;
+    --bs-accordion-inner-border-radius: 0.75rem;
+    --bs-accordion-btn-focus-box-shadow: none; /* Removes the blue glow on click */
+    --bs-accordion-active-color: var(--hiringmine-purple);
+    --bs-accordion-active-bg: #f7f5ff;
+    --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237b61ff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
+}
+
+.accordion-item {
+    border: 1px solid var(--bs-accordion-border-color);
+    margin-bottom: 1rem; /* Creates the space between FAQ items */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border-radius: var(--bs-accordion-border-radius) !important; /* Ensure our radius is applied */
+}
+
+.accordion-item:first-of-type, .accordion-item:last-of-type {
+    border-radius: var(--bs-accordion-border-radius) !important;
+}
+
+.accordion-button {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.accordion-button:not(.collapsed) {
+     box-shadow: none; /* Remove inner shadow when open */
+}
+
+.accordion-body {
+    line-height: 1.7;
+}
+
+/* -- Footer Styling -- */
+:root {
+    --footer-purple: #613fe5; /* The rich purple from the footer design */
+    --footer-text: #e2e8f0; /* A soft white for better readability */
+    --footer-link-hover: #ffffff; /* Brighter white for hover */
+}
+
+.site-footer {
+    background-color: var(--footer-purple);
+    color: var(--footer-text);
+}
+
+.footer-logo {
+    max-height: 45px;
+}
+
+.footer-description {
+    max-width: 450px; /* Constrains the width for better readability */
+}
+
+.site-footer h5 {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.footer-links li a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: var(--footer-link-hover);
+}
+
+.social-icons a {
+    color: var(--footer-text);
+    font-size: 1.5rem; /* 24px */
+    margin-right: 1.25rem; /* 20px */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--footer-link-hover);
+}
+
+/* Sub-footer Styling */
+.sub-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sub-footer a, .sub-footer p {
+    color: var(--footer-text);
+    font-size: 0.875rem; /* 14px */
+    text-decoration: none;
+}
+
+.sub-footer a:hover {
+    color: var(--footer-link-hover);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Responsiveness --- */
+/* On medium screens and below, we want the links to stack cleanly */
+@media (max-width: 992px) {
+    .navbar-nav {
+        margin-top: 1rem; /* Add some space above the links in mobile view */
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 0.5rem; /* Space out the stacked links */
+    }
+
+    /* Stack the special link and toggle vertically on mobile */
+    .navbar .d-flex {
+        flex-direction: column;
+        align-items: center !important;
+        margin-top: 1rem;
+    }
+
+    .special-link {
+        margin-bottom: 1rem; /* Space between the link and the toggle */
+        margin-right: 0 !important; /* Reset the margin */
+    }
+}
+
+@media (max-width: 991.98px) {
+    h1.display-3 {
+        font-size: 2.5rem; /* Make the main heading a bit smaller on mobile */
+    }
+
+    /* Add some top margin to the upload box on mobile to separate it from the text */
+    .upload-box {
+        margin-top: 2rem;
+    }
+     .col-lg-6:last-child {
+        margin-top: 2.5rem;
+    }
+     .ats-understanding-section .order-lg-2 {
+        margin-top: 2rem;
+    }
+
+    /* We need to reverse the order on mobile for the margin to apply correctly */
+    .ats-understanding-section .order-lg-1 {
+        order: 1 !important;
+    }
+    .ats-understanding-section .order-lg-2 {
+        order: 2 !important;
+    }
+}
